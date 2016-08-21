@@ -1,0 +1,26 @@
+1. ECMA script er það sem keyrir Javascript og JavaScript byggist upp á því.
+
+2. === Ber saman alla liði breytu. == tekur bara gildin í einhverju, þ.e.a.s. hversu hátt eða hátt gildi er í tveimur jöfnum, === ber saman 
+hvernig tegund gilding eru. Null getur verið == og undefined, en Null er ekki === og undefined.
+
+3. Error þar sem ekki er hægt að nota reikniaðgerðir á string. 
+
+4. 2 global variables
+
+5. B. er í strict mode sem er tekur betur eftir exceptions og er gott að nota þegar maður er að keyra ótraustan kóða.
+
+6. Undefined er undefined en null er tómt
+
+7.
+var names = ['George','Ringo','Paul','John'];
+forEach(item in names){
+doSomethingWith(item);
+}
+Foreach er betra að höndla array þar sem það keyrir í gegnum hvern einasta hlut í array-inum
+
+8. For Of höndlar liði í fylkum, For In höndlar tölu greina í fylkum og foreach höndlar hlutina í fylkunum
+
+9. NaN er ekki tala (Not a Number) og samkvæmt netinu er NaN !== NaN vegna þess að JavaScript segir það.
+
+10. True þar sem gildin eru ekki eins. Or opperatorinn virkar eins og Or í boolean reiknun.
+
