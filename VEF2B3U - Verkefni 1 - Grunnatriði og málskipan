@@ -5,7 +5,7 @@ hvernig tegund gilding eru. Null getur verið == og undefined, en Null er ekki =
 
 3. Error þar sem ekki er hægt að nota reikniaðgerðir á string. 
 
-4. 2 global variables
+4. 3 global variables
 
 5. B. er í strict mode sem er tekur betur eftir exceptions og er gott að nota þegar maður er að keyra ótraustan kóða.
 
