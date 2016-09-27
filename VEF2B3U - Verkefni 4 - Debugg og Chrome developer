@@ -23,7 +23,7 @@
 })();
 
 console.log(b);
-
+Console prentar út 5 af því að VAR er að skilgreina bæði a og b sem 5 á sama tíma
 
 // 3. - 0.5% - Hoisting
 // Hver er niðurstaðan og afhverju
@@ -37,7 +37,7 @@ function test() {
    }
 }
 
-test();
+test(); Þetta prentar út 2 því að þegar "a" er kallað, þá hefur það ekki verið skilgreint. Functions er samt hægt að kalla á hvar sem er.
 
 // 4. - 0.5% - this
 // Hver er niðurstaðan, útskýrðu svar
@@ -55,27 +55,26 @@ var obj = {
 console.log(obj.prop.getFullname());
 
 var test = obj.prop.getFullname;
-
-console.log(test());
+Hef ekki glóru
 
 
 // 5. - 0.5%  
 // Notaðu hér fyrir neðan "use strict" á viðeigandi stað og jshint þér til hjálpar
 // a) hver er villan, b) afhverju er villa, c) lagaðu hana
 function canYouSpotTheProblem() {
-  for (counter = 0; counter < 10; counter++)
+  for (var counter = 0; counter < 10; counter++)
     console.log("Happy happy");
 }
 canYouSpotTheProblem();
-
+Það vantaði var til þess að skilgreina counter stakið.
 
 // 6. - 0.5%
 //a) hver er villan, b) afhverju er villa, c) lagaðu hana
 function Person(name) { this.name = name; }
 var ferdinand = Person("Ferdinand"); 
-console.log(name); 
+//console.log(name); 
 console.log(ferdinand.name); 
-
+Það er ekki hægt að kalla á name eitt og sér vegna þess að það er nested í functioninu
 
 
 // 7. - 0.5%
@@ -86,7 +85,7 @@ function promptDirection(question) {
   var result = prompt(question, "");
   if (result.toLowerCase() == "left") return "L";
   if (result.toLowerCase() == "right") return "R";
-  throw new Error("Invalid direction: " + result);
+  throw new Error("Invalid direction: " + result); //Throw býr til nýja villumeldingu
 }
 
 function look() {
@@ -96,7 +95,7 @@ function look() {
     return "two angry bears";
 }
 
-try {
+try {//Try tékkar hérna hvort svarið sé eitt af möguleikunum sem boðið er upp á í look() functioninu og ef það er ekki til, þá hendir það exception
   console.log("You see", look());
 } catch (error) {
   console.log("Something went wrong: " + error);
