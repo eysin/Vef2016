@@ -1,0 +1,13 @@
+1% Hvað gerir eftirfarandi kóði, útskýrðu línu fyrir línu.
+
+var elements = document.getElementsByTagName('li'); // Skilgreinir elements sem html töggin með nafnið "li"
+if (elements.length > 0) { // Tékkar hvort það séu fleiri en 0 fylki í <li> tagginu
+var el = elements[2]; // skilgreinir el sem annað elementið í elements
+el.className = 'cool'; // breitir classinum á el elementinu í "cool"
+}
+
+
+
+1% Hver er munurinn á að nota innerHtml() og DOM Manipulation ( t.d. createElement,
+createTextNode, appendChild)?
+Dom er betra þegar kemur að því að breyta mörgum föllum í einu. Annars virka þau mjög svipað.
