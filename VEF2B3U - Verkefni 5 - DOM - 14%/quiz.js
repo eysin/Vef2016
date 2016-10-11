@@ -1,3 +1,5 @@
+if (true) {
+
 "use strict";
 var selector = 0;
 var stig = 0;
@@ -8,11 +10,15 @@ function Question(question, choices, correctAnswer) {
 	this.correctAnswer = correctAnswer;
 
 }
+function randomize(){
+	selector = Math.floor((Math.random() * questions.length));
+
+}
 var questions = [];
 questions.push(new Question("Who is Prime Minister of the United Kingdom", [ "David Cameron", "Gordon Brown", "Winston Churchill","Tony Blair"], 0));
 questions.push(new Question("Who hosts the Tv show, Kitchen Nightmares", [ "Ainsley Harriot", "Jamie Oliver", "Gordon Ramsay","Gordon Brown"], 2));
 questions.push(new Question("Who is the hero in the famous video game Zelda", [ "Zelda", "Link", "Lonk","Ocarina"], 1));
-questions.push(new Question("Stock Question2", [ "incorrect", "correct", "incorrect","incorrect"], 1));
+questions.push(new Question("Stock Question2", [ "incorrect", "correct", "incorrect"], 1));
 questions.push(new Question("Stock Question1", [ "correctt", "incorrect", "incorrect","incorrect"], 0));
 questions.push(new Question("Stock Question3", [ "incorrect", "incorrect", "correct","incorrect"], 2));
 questions.push(new Question("Stock Question4", [ "incorrect", "incorrect", "incorrect","correct"], 3));
@@ -28,7 +34,7 @@ function loadQuestion(){
 		questionDiv.removeChild(questionDiv.lastChild);
 
 	}
-	selector = Math.floor((Math.random() * questions.length));
+	randomize();
 
 	document.getElementById("question").innerHTML = questions[selector].question;
 	document.title = stig + " Stig";
@@ -43,6 +49,8 @@ function loadQuestion(){
 
 
 	}
+}
+loadQuestion();
 }
 
 // Upphafstilling.
